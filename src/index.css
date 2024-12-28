@@ -7,14 +7,32 @@
   color: #252525;
   margin-top: 10px;
 }
+
+/* MOBILE */
+
 @media (max-width: 576px) {
   .inputErrMsg {
     bottom: -40px;
   }
   p, #textOnLoad {
-    width: 300px;
+    padding-left: 50px;
+  }
+  #clear-button, #copy-res-button, #send-button {
+    padding: 5px 15px;
+  }
+  #clear-button::before {
+    content: "🗑️";
+  }
+  #copy-res-button::before {
+    content: "📋";
+  }
+  #send-button::before {
+    content: "▶";
   }
 }
+
+/* IPADS */
+
 @media (max-width: 1000px) {
   .inputErrMsg {
     bottom: -30px;
@@ -23,20 +41,53 @@
     margin-left: -30px;
     width: 50vw;
   }
+  #userTextInput {
+    margin-left: 80px;
+  }
+  #copy-res-button {
+    margin-right: 80px;
+  }
+  #clear-button::before {
+    content: "🗑️";
+  }
+  #copy-res-button::before {
+    content: "📋";
+  }
+  #send-button::before {
+    content: "▶";
+  }
 }
+
+/* PC'S */
+
 @media (min-width: 1000px) {
   .inputErrMsg {
     bottom: -24px;
+    margin-left: 80px;
   }
   p, #textOnLoad {
     margin-left: -30px;
     width: 60vw;
   }
+  #userTextInput {
+    margin-left: 80px;
+  }
+  #copy-res-button {
+    margin-right: 80px;
+  }
+  #clear-button::before {
+    content: "Clear";
+  }
+  #copy-res-button::before {
+    content: "Copy response";
+  }
+  #send-button::before {
+    content: "Send";
+  }
 }
+
 body {
-  font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to top, #e9e993, #f1f12c, yellow, #2929f0,blue, #0303b6);
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
@@ -68,7 +119,7 @@ header {
 #app-name {
   font-size: 80px;
   margin-top: 18px;
-  text-shadow: 1px 1px 1px #333232;
+  text-shadow: 2px 2px 2px #333232;
 }
 #app-version {
   font-size: 25px;
@@ -120,4 +171,27 @@ textarea {
 }
 textarea::placeholder {
   color: rgb(116, 114, 114);
+}
+#settingsMenu {
+  background: url('assets/gifs/settings-bg.gif');
+  width: 900px;
+  height: 600px;
+  border: 2px solid white;
+  position: absolute;
+  left: 25%;
+  top: 20%;
+  color: white;
+}
+#close-settings-menu {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: red;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 15px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
 }
