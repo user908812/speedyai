@@ -21,7 +21,7 @@ function Body() {
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const genAI: GoogleGenerativeAI = new GoogleGenerativeAI('AIzaSyDPqSDFqps2hfip-gpbjkWFO-OOUuqA25s');
-  const model: GenerativeModel = genAI.getGenerativeModel({ model: 'gemini-pro' });
+  const model: GenerativeModel = genAI.getGenerativeModel({ model: 'text-bison' });
   const messageHistory = document.getElementById('messages-container') as HTMLDivElement | null;
 
   document.body.style.background = styles.background;
